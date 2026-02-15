@@ -1,0 +1,102 @@
+site_name: oneGRC
+site_description: Information Security beyond.
+site_author: Devanath
+site_url: https://rdevanath.github.io/grc/
+nav:
+  - Home: 
+      - Home: index.md
+      - Tags: document/shortcut.md
+  - Framewors: 
+      - NIST CSF SP 800-53 : document/nist80053.md
+      - CIS: document/cis.md
+      - COBIT: document/cobit.md
+  # - Test: test-docs.md
+  # - Test:
+  #     - blog/posts/test-blog.md
+
+exclude_docs: |
+  test-docs.md
+  blog/posts/test-blog.md
+
+plugins:
+  - search
+  - tags
+  # - meta                       # For folder-wide metadata (all files in docs/), create docs/.meta.yml:
+  - blog:
+      authors: true
+      blog_dir: blog             # /docs/blog | note: blog names are customizable. e.g. articles
+      # post_dir: blog           # Changed: posts directly in blog/
+      post_dir: "{blog}/posts"   # blog post location - blog/posts/file.md
+      post_url_format: "{slug}"
+      blog_toc: true
+
+theme:
+  name: material
+  font: 
+    text: Merriweather Sans
+    code: Red Hat Mono
+  favicon: image/icon.png
+  icon:
+    logo: fontawesome/solid/shield
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.indexes
+    # - navigation.footer                 # adds footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    #- toc.integrate                       #integrates titles or sub-heading
+    - navigation.top
+    - search.suggest
+    - search highlight
+    - search.share
+
+markdown_extensions:
+  - meta                                  # Enables frontmatter like `author: john-doe`
+  - attr_list
+  - pymdownx.emoji:                       # emojis and stickers
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:                      # mermaid diagrams
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:                      # switchable tabs
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+extra:
+  social: # social media links
+    # - icon: material/youtube
+    #   link: https://youtube.com/xyz
+    - icon: fontawesome/brands/github
+      link: https://github.com/rdevanath
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rdevanath
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright:  copyright &copy; 2026 by oneGRC   # copywright note

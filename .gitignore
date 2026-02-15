@@ -1,0 +1,32 @@
+# Build output (MkDocs generated site)
+site/
+
+# Python virtual environments
+venv/
+env/
+.venv/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE/editor files (VS Code)
+.vscode/settings.json
+*.swp
+*.swo
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+*.log
+dist/
+build/
+.env
