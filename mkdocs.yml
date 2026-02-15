@@ -32,6 +32,7 @@ plugins:
 
 theme:
   name: material
+  custom_dir: overrides           # custom directory for the giscus comment script
   font: 
     text: Merriweather Sans
     code: Red Hat Mono
