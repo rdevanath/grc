@@ -1,8 +1,7 @@
-# Hey, **Vanakkam** to **[oneGRC](https://rdeva-py.github.io/grc/)**
-![welcome](image/rdj.png)
-_<sup>image credit: Marvel & RDJ</sup>_
+# Hey, **Welcome** to **[oneGRC](https://rdeva-py.github.io/grc/)**
+![welcome](image/home.png)
 
-In this website, I will be covering every major Standards and Compliance frameworks under Information Security. Hope you find it useful.
+"This will be your one-stop hub for all things InfoSec! From ISO to NIST, we’re diving deep into every major standard and compliance framework—served with clarity and a learning mindset. Hope you enjoy the ride!"
 
 Checkout the **[Index page](document/shortcut.md)** for articles.
 
