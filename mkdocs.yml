@@ -14,13 +14,13 @@ nav:
       - SSAE 18: document/attest.md
       - COSO: document/coso.md
       - GAPP: document/gapp.md
-  - Test: test-docs.md
+  # - Test: test-docs.md
   # - Test:
   #     - blog/posts/test-blog.md
 
-# exclude_docs: |
-#   test-docs.md
-#   blog/posts/test-blog.md
+exclude_docs: |
+  test-docs.md
+  blog/posts/test-blog.md
 
 plugins:
   - search
