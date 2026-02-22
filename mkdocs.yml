@@ -7,17 +7,19 @@ nav:
       - Home: index.md
       - Tags: document/shortcut.md
   - Framewors: 
-      - NIST CSF SP 800-53 : document/nist80053.md
+      - NIST CSF SP 800-53: document/nist80053.md
       - CIS: document/cis.md
       - COBIT: document/cobit.md
-      - SOC 2: documment/soc2.md
+      - SOC 2: document/soc2.md
+      - SSAE 18: document/attest.md
+      - COSO: document/coso.md
   - Test: test-docs.md
   # - Test:
   #     - blog/posts/test-blog.md
 
-exclude_docs: |
-  test-docs.md
-  blog/posts/test-blog.md
+# exclude_docs: |
+#   test-docs.md
+#   blog/posts/test-blog.md
 
 plugins:
   - search
