@@ -247,25 +247,6 @@
   
 
       
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../test-docs/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Test
-
-      </a>
-    </li>
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -684,33 +665,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../test-docs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -747,124 +701,6 @@
 <hr />
       </header>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="../image/author.png" alt="Devanath">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-02-13 00:00:00+00:00">February 13, 2026</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="title"><a class="toclink" href="hello-world/">Title</a></h2>
-<ul>
-<li><strong><a href="hello-world/">My GRC Post</a></strong>
-  <em>Security, GRC</em></li>
-</ul>
-<h3 id="coding-tab"><a class="toclink" href="hello-world/#coding-tab">coding tab</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pythoncode.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;User&quot;</span>
-<span class="hll"><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># &lt;- Line 2 highlighted</span>
-</span><span class="hll"><span class="n">double_age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># &lt;- Line 3 highlighted</span>
-</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="parallel-tabs-test"><a class="toclink" href="hello-world/#parallel-tabs-test">parallel tabs test</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">tab one</label><label for="__tabbed_1_2">Nested / grouped tabs (tabs inside tabs)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Indentation matters - Everything inside a tab must be indented (usually 4 spaces).</p>
-</div>
-<div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">FastAPI</label><label for="__tabbed_2_2">Django</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>FastAPI content here.</p>
-</div>
-<div class="tabbed-block">
-<p>Django content here.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<h3 id="admoniton-feature-calls-out-contents"><a class="toclink" href="hello-world/#admoniton-feature-calls-out-contents">Admoniton feature - Calls out contents</a></h3>
-<p>!!! tip "title optional
-    This feature works. :smile"</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<details class="note">
-<summary>Expanded note</summary>
-<p>Starts collapsed.</p>
-</details>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Expanded by default</p>
-</details>
-<h3 id="flowchart-diagram"><a class="toclink" href="hello-world/#flowchart-diagram">flowchart diagram</a></h3>
-<p>There are more types of diagram like sequential and more. Checkout the blog</p>
-<p _="%" _partials_author.html_="&quot;partials/author.html&quot;" include="include"><pre class="mermaid"><code>graph TD
-  A[Start] --&gt; B[Process]
-  B --&gt; C[End]</code></pre></p>
-<div class="share-buttons">
-  <a href="https://x.com/intent/post?text={{ page.title }}&url={{ page.canonical_url }}" class="share-x">
-   Share on 𝕏 
-  </a>
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.canonical_url }}" class="share-linkedin">
-    Share on Linkedinℹ️ 
-  </a>
-</div>
-    
-    
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  
-</nav>
-        
       
     </div>
   </div>
