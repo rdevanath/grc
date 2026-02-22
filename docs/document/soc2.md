@@ -63,7 +63,7 @@ There are two ways sub-service organization are handled in SOC 2:
 
 * The service organization assumes these controls are in place at the user entity to ensure the overall system works securely.
 
-* Example: If a service organization provides secure file sharing, the user entity must revoke access for terminated employees — the service org can’t do that on its own.
+* Example: If a service organization provides secure file sharing, the user entity must revoke access for terminated employees — the service organization on its own.
 
 SOC 2 reports list CUECs so user entities know what they must do to uphold the shared security model.
 
