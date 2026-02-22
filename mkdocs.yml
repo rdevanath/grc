@@ -10,7 +10,8 @@ nav:
       - NIST CSF SP 800-53 : document/nist80053.md
       - CIS: document/cis.md
       - COBIT: document/cobit.md
-  # - Test: test-docs.md
+      - SOC 2: documment/soc2.md
+  - Test: test-docs.md
   # - Test:
   #     - blog/posts/test-blog.md
 
