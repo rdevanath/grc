@@ -15,6 +15,7 @@ nav:
       - COSO: document/coso.md
       - GAPP: document/gapp.md
       - HITRUST: document/hitrust.md
+      - PCIDSS: document/pcidss.md
   # - Test: test-docs.md
   # - Test:
   #     - blog/posts/test-blog.md

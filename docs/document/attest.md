@@ -1,3 +1,8 @@
+---
+tags:
+  - Frameworks & Standards
+---
+
 # Attestation Standard vs Reporting Standard
 
 | Category            | Attestation Standard                                                                 | Reporting Standard                                                                 |
