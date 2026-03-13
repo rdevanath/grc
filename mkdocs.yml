@@ -17,6 +17,7 @@ nav:
       - HITRUST: document/hitrust.md
       - PCI-DSS: document/pcidss.md
       - SWIFT: document/swift.md
+      - ISO27001: document/iso27001.md
   # - Test: test-docs.md
   # - Test:
   #     - blog/posts/test-blog.md

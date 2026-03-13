@@ -1,0 +1,53 @@
+# ISO 27001:2022
+
+## ISO/IEC 27001-2022 & 27002 - Information Security Management System (ISMS)
+
+* ISO/IEC 27001 specifies the requirements for establishing, implementing, maintaining, and continually improving an ISMS. Organizations can become formally certified to demonstrate a structured, risk-based approach to protecting confidentiality, integrity, and availability of information.
+
+* ISO/IEC 27002 complements 27001 by providing detailed best-practice guidance on selecting and implementing **93 security controls** across organizational, people, physical, and technological domains. Unlike 27001 (which is certifiable), 27002 is _not_ a management standard but a practical controls _catalogue_ for risk treatment. It plays a supporting role to ISO/IEC 27001.
+
+The clauses form the backbone of ISO 27001 compliance. Clauses 4–10 are mandatory requirements for certification, while Clauses 1–3 provide foundational context.
+
+## Changes in Annexure Controls from ISO/IEC 27001:2013 
+
+* The control sets are now organized into four (4) categories or themes as opposed to fourteen (14) control domains. The 4 categories include Organizational, People, Physical, and Technological. 
+
+* The total control count has been reduced—there are 21 less controls in the 2022 version; leading to a total of 93 controls. 
+
+* There was a concentrated effort to avoid control redundancy. 24 controls in the 2022 version included merged controls from the 2013 version. 
+
+* There are now 11 new controls to update the standard to the current information security and cyber security landscape. 
+
+* Objectives for controls have been removed from ISO/IEC 27001:2022 standards.
+
+## The 11 new control topics:
+
+* Organizational Control
+
+    5.7 Threat intelligence
+
+    5.23 Information security for use of cloud services
+
+    5.30 ICT readiness for business continuity [ICT -Information & Communication Technology]
+
+* Physical Control
+
+    7.4 Physical security monitoring
+
+* Technological Control
+
+    8.9 Configuration management
+
+    8.10 Information deletion
+
+    8.11 Data masking
+
+    8.12 Data leakage prevention
+
+    8.16 Monitoring activities
+
+    8.23 Web filtering
+    
+    8.28 Secure coding
+
+
