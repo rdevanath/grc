@@ -1,0 +1,27 @@
+/* Share buttons with icons */
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.share-x, .share-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--md-primary-fg-color);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.share-x:hover, .share-linkedin:hover {
+  background: var(--md-primary-fg-color--hover);
+  transform: translateY(-1px);
+}
+
+/* Hide Material's default share */
+.md-content__share { display: none !important; }

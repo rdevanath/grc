@@ -1,0 +1,2575 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Information Security & beyond.">
+      
+      
+        <meta name="author" content="Devanath">
+      
+      
+        <link rel="canonical" href="https://rdevanath.github.io/grc/document/pcidss/">
+      
+      
+        <link rel="prev" href="../hitrust/">
+      
+      
+        <link rel="next" href="../swift/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../image/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>PCI-DSS - oneGRC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pci-dss-payment-card-industry-data-security-standard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="oneGRC" class="md-header__button md-logo" aria-label="oneGRC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 0c4.6 0 9.2 1 13.4 2.9l188.4 79.9c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0C57.3 420.7 16.6 239.2 16.1 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            oneGRC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCI-DSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../nist80053/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Framewors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fisma/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Compliance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../auditlife/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  GRC concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="oneGRC" class="md-nav__button md-logo" aria-label="oneGRC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 0c4.6 0 9.2 1 13.4 2.9l188.4 79.9c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0C57.3 420.7 16.6 239.2 16.1 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0"/></svg>
+
+    </a>
+    oneGRC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortcut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framewors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framewors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist80053/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NIST 800-53
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cobit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COBIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soc1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SOC 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soc2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SOC 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soc3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SOC vs SOC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSAE 18
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COSO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAPP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hitrust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HITRUST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCI-DSS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCI-DSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merchant-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merchant Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-questionnaire-saq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self Assessment Questionnaire (SAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardholder-data-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardholder Data Environment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-chd-sad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storing CHD &amp; SAD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokenization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-saq-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of SAQ forms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SWIFT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso27001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO 27001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isosoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO vs SOC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isostd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Compliance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fisma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FISMA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fedramp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FedRAMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SOX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccpa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hippa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HIPPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GDPR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DORA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CERT-IN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rbi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RBI Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UPI Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dpdpa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPDPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../incident/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GRC concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GRC concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditlife/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditstep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit Procedure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audittypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LOD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RACI Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riskconcept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IT Risk concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riskmanage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IT Risk Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biara/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BIA vs RA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BCMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drsites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DR sites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merchant-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merchant Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-questionnaire-saq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self Assessment Questionnaire (SAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardholder-data-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardholder Data Environment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-chd-sad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storing CHD &amp; SAD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokenization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-saq-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of SAQ forms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../shortcut/#tag:frameworks--standards" class="md-tag">Frameworks & Standards</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="pci-dss-payment-card-industry-data-security-standard">PCI-DSS (Payment Card Industry Data Security Standard)</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The PCI Data Security Standard v4.0 (published March 31, 2022) is an information security standard for businesses that handle payment card (both credit and debit) information. It was created by the PCI Security Standards Council that includes every major payment card company - Visa, MasterCard, Discover, American Express, JCB and UnionPay.</p>
+<p>These businesses are expected to comply with PCI DSS, enforced through assessments via Self-Assessment Questionnaires (SQA) or Qualified Security Assessors (QSAs) and they can be fined or penalized if they don't.</p>
+<p>The standard’s 12 requirements fall under six objectives:</p>
+<ol>
+<li>
+<p>Build and maintain a secure network</p>
+<ul>
+<li>Install and maintain network security controls </li>
+<li>Apply secure configurations to all system components</li>
+</ul>
+</li>
+<li>
+<p>Protect cardholder data</p>
+<ul>
+<li>Protect stored account data </li>
+<li>Protect cardholder data with strong cryptography during transmission</li>
+</ul>
+</li>
+<li>
+<p>Maintain a vulnerability management program</p>
+<ul>
+<li>Protect all systems and networks from malicious software</li>
+<li>Develop and maintain secure systems and software</li>
+</ul>
+</li>
+<li>
+<p>Implement strong access controls</p>
+<ul>
+<li>Restrict access to system components and account data by business need-to-know </li>
+<li>Identify users and authenticate access to system components</li>
+<li>Restrict physical access to cardholder</li>
+</ul>
+</li>
+<li>
+<p>Regularly monitor and test networks</p>
+<ul>
+<li>Log and monitor all access to system components and cardholder data</li>
+<li>Test security of systems and networks regularly</li>
+</ul>
+</li>
+<li>
+<p>Maintain an information security policy</p>
+<ul>
+<li>Support information security with organizational policies and programs</li>
+</ul>
+</li>
+</ol>
+<h2 id="merchant-level">Merchant Level</h2>
+<p>Annual transaction volume determines your merchant level (Level 1–4).</p>
+<div class="admonition info">
+<p class="admonition-title">Merchant Level</p>
+<ul>
+<li>
+<p>Level 1 - More than 6 million</p>
+</li>
+<li>
+<p>Level 2 - 1 to 6 million</p>
+</li>
+<li>
+<p>Level 3 - 20,000 to 1 million</p>
+</li>
+<li>
+<p>Level 4 - Fewer than 20,000</p>
+</li>
+</ul>
+</div>
+<p>PCI DSS compliance assessment is fundamentally an annual requirement, but it includes mandatory quarterly components. </p>
+<ul>
+<li>
+<p><strong>Annually (Annual Assessment/Attestation):</strong> All entities (merchants and service providers) must validate their compliance with PCI DSS requirements once a year.</p>
+<ul>
+<li>
+<p><strong>Level 1 Merchants/Service Providers:</strong> Require a formal Report on Compliance (ROC) performed by a Qualified Security Assessor (QSA).</p>
+</li>
+<li>
+<p><strong>Level 2-4 Merchants:</strong> Generally, require a self-validated Self-Assessment Questionnaire (SAQ) and an Attestation of Compliance (AOC).</p>
+</li>
+<li>
+<p><strong>Payment environment determines which SAQ type applies</strong> depending on how a merchant accepts and processes cardholder data (e.g., e commerce, in store terminals, outsourcing, storage of card data, etc.).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Quarterly (Network Scans):</strong> If you have external-facing IP addresses, you must conduct quarterly vulnerability scans performed by a PCI-approved scanning vendor (ASV).</p>
+</li>
+<li>
+<p><strong>Annual Penetration Testing:</strong> In addition to the annual assessment, a penetration test of the network and applications is required at least annually. </p>
+</li>
+</ul>
+<p><strong>Key Takeaway:</strong> While you submit your formal compliance validation once a year, you must perform quarterly vulnerability scans to maintain that compliance throughout the year.</p>
+<h2 id="self-assessment-questionnaire-saq">Self Assessment Questionnaire (SAQ)</h2>
+<ul>
+<li>
+<p>It’s a validation tool created by the PCI Security Standards Council (PCI SSC).</p>
+</li>
+<li>
+<p>Merchants and service providers use it to self evaluate their compliance with the PCI DSS (Payment Card Industry Data Security Standard).</p>
+</li>
+<li>
+<p>Instead of always undergoing a full external audit, smaller or lower risk entities can complete the SAQ to demonstrate they meet PCI DSS requirements.</p>
+</li>
+</ul>
+<p><strong>What are SAQs for?</strong></p>
+<ul>
+<li>
+<p>Compliance Reporting: They allow merchants/service providers to report their PCI DSS compliance status to their acquiring bank or payment brands.</p>
+</li>
+<li>
+<p>Risk Reduction: By answering the SAQ, organizations confirm they have the required security controls in place to protect cardholder data.</p>
+</li>
+<li>
+<p>Scoping Tool: Different SAQ types apply depending on how you handle cardholder data (e.g., e commerce only, in store terminals, fully outsourced processing).</p>
+</li>
+<li>
+<p>Alternative to Full Audit: For smaller merchants (PCI Level 2 - 4), SAQs replace the need for a full Report on Compliance (RoC) by a Qualified Security Assessor.</p>
+</li>
+</ul>
+<p><strong>How They Work</strong></p>
+<ul>
+<li>
+<p>Each SAQ is a set of yes/no questions aligned to PCI DSS requirements.</p>
+</li>
+<li>
+<p>At the end, the merchant signs an Attestation of Compliance (AoC) confirming they meet the requirements.</p>
+</li>
+<li>
+<p>The completed SAQ is submitted to the acquiring bank or card brand as proof of compliance.</p>
+</li>
+</ul>
+<h2 id="cardholder-data-environment">Cardholder Data Environment</h2>
+<p>PCI DSS system categorization and scoping involve identifying the Cardholder Data Environment (CDE) and connected systems to determine applicable controls and SAQ type.</p>
+<p>The CDE includes people, processes, and technology handling cardholder data (CHD) or Sensitive Authentication Data (SAD), plus connected systems. Start by inventorying all CHD/SAD flows, storage locations, and processing points using data discovery tools or diagrams. Connected systems (e.g., those sharing networks) must be scoped if they impact CDE security.</p>
+<p><strong>Categorize Systems</strong></p>
+<ul>
+<li>
+<p><strong>In-Scope (CDE Core):</strong> Systems directly storing, processing, or transmitting CHD/SAD.</p>
+</li>
+<li>
+<p><strong>Connected-to-CDE:</strong> Systems on the same network or with logical access to CDE; apply segmentation (e.g., firewalls) to limit scope.</p>
+</li>
+<li>
+<p><strong>Out-of-Scope:</strong> Isolated systems with no CDE connectivity; verify annually via testing.</p>
+</li>
+</ul>
+<p><strong>Scoping Steps</strong></p>
+<ol>
+<li>
+<p>Map data flow diagrams showing CHD entry, movement, and exit points.</p>
+</li>
+<li>
+<p>Segment networks to isolate CDE (Requirement 1).</p>
+</li>
+<li>
+<p>Select SAQ based on payment methods (e.g., SAQ A for fully outsourced CNP, SAQ D for others)</p>
+</li>
+<li>
+<p>Document scope in a report with diagrams and justifications</p>
+</li>
+</ol>
+<h2 id="storing-chd-sad">Storing CHD &amp; SAD</h2>
+<p><strong>1. Cardholder Data (CHD)</strong></p>
+<p>Cardholder data can be stored by merchants if there is a legitimate business need and it is protected (typically via encryption). It includes:</p>
+<ul>
+<li>
+<p><strong>Primary Account Number (PAN):</strong> The unique 15- or 16-digit credit or debit card number.</p>
+</li>
+<li>
+<p><strong>Cardholder Name:</strong> The name of the individual to whom the card was issued.</p>
+</li>
+<li>
+<p><strong>Expiration Date:</strong> The month and year the card expires.</p>
+</li>
+<li>
+<p><strong>Service Code:</strong> A three- or four-digit number in the magnetic stripe that specifies acceptance requirements and limitations for the card.</p>
+</li>
+</ul>
+<p>The full PAN <em>must</em> be rendered unreadable if stored, using methods like encryption, truncation, or hashing. Name, expiration date, and service code are included only when linked with the full PAN.</p>
+<p><strong>2. Sensitive Authentication Data (SAD)</strong></p>
+<p>SAD is <em>highly sensitive</em> information used to authorize transactions. According to PCI DSS version 4.0, SAD must never be stored after authorization, even if it is encrypted (except for issuers with justified needs under strict controls like strong cryptography). It includes: </p>
+<ul>
+<li>
+<p><strong>Full Track Data:</strong> The complete data contained on the card's magnetic stripe or equivalent data on a chip.</p>
+</li>
+<li>
+<p><strong>Card Verification Codes:</strong> Also known as CVV2, CVC2, CID, or CAV2, these are the 3- or 4-digit security codes printed on the front or back of the card.</p>
+</li>
+<li>
+<p><strong>PINs and PIN Blocks:</strong> Personal Identification Numbers and the encrypted blocks of data used to transport them during a transaction.</p>
+</li>
+</ul>
+<h2 id="tokenization">Tokenization</h2>
+<p>A data protection technique used in payment security.</p>
+<ul>
+<li>
+<p>It replaces sensitive cardholder data (like the Primary Account Number, PAN) with a random, unique “token”.</p>
+</li>
+<li>
+<p>It is primarily used to secure transactions. By storing a token instead of a credit card number, a merchant reduces their "attack surface." If their database is breached, the tokens are worthless to hackers without access to the separate "token vault".</p>
+</li>
+<li>
+<p>The token has no exploitable value if intercepted — it <em>cannot</em> be mathematically <em>reversed</em> to reveal the original card number.</p>
+</li>
+<li>
+<p>The real card data is stored securely in a token vault (usually managed by a PCI DSS compliant provider) which is the only place the token can be mapped back to the original data.</p>
+</li>
+<li>
+<p>Merchants and systems then use the token instead of the actual card number for transactions, recurring billing, or analytics.</p>
+</li>
+</ul>
+<p><strong>Benefits of Tokenization</strong></p>
+<ul>
+<li>
+<p>Reduces PCI DSS scope (fewer systems handle real card data).</p>
+</li>
+<li>
+<p>Enhances security — tokens are useless to attackers.</p>
+</li>
+<li>
+<p>Supports business processes like recurring payments without storing PANs.</p>
+</li>
+<li>
+<p>Simplifies compliance and lowers audit costs.</p>
+</li>
+</ul>
+<h2 id="types-of-saq-forms">Types of SAQ forms</h2>
+<p>There are 9 Self Assessment Questionnaires (SAQs) under PCI DSS.
+They are designed for different merchant environments depending on how you accept and process cardholder data:</p>
+<ul>
+<li>
+<p><strong>SAQ A</strong> applies to card-not-present (CNP) merchants, including e-commerce and mail/telephone order (MOTO), who fully outsource all payment processing to a PCI DSS-compliant third-party service provider. These merchants do not electronically store, process, or transmit cardholder data on their systems.</p>
+</li>
+<li>
+<p><strong>SAQ A-EP</strong> targets e-commerce merchants who outsource payment processing but maintain websites or elements (like payment forms) that could impact transaction security. Unlike SAQ A, these merchants have partial control over the payment page, though they still avoid direct electronic handling of cardholder data.</p>
+</li>
+<li>
+<p><strong>SAQ B</strong> applies to merchants processing cardholder data only via imprint machines or standalone, non-networked dial-out terminals, with no electronic transmission or storage of card data. It covers a limited set of PCI DSS requirements like physical access controls, policies, and restricting data access.</p>
+<p>Standalone dial-out terminals are independent payment devices, typically countertop credit card readers, that connect directly to a payment processor via a standard analogue phone line (dial-up) rather than the internet or a network. They process transactions offline by dialling out to authorize cards, ensuring no cardholder data enters your internal systems.</p>
+</li>
+<li>
+<p><strong>SAQ B-IP</strong> targets merchants using standalone, PTS-approved point-of-interaction (POI) devices connected via IP (modern, standalone payment terminals) to process card data, but with no electronic storage or other non-terminal functions handling cardholder data. It includes more comprehensive requirements than SAQ B, such as network security and vulnerability management for the IP-connected devices.</p>
+</li>
+<li>
+<p><strong>SAQ C</strong> applies to merchants and service providers using payment application systems connected to the internet or other public networks, where they process, store, or transmit cardholder data electronically. It covers most PCI DSS requirements, including firewalls, access controls, encryption, and monitoring, but excludes those fully addressed by validated payment applications.</p>
+<p>Payment application systems are comprehensive software platforms (often installed on merchant servers or devices) that handle full payment processing workflows, including card reading, authorization, settlement, and reporting—requiring broader PCI DSS scoping and PA-DSS validation. </p>
+<p>Virtual terminal (VT) solutions, by contrast, are lightweight web-based interfaces hosted by payment providers where merchants manually key in card details for card-not-present (CNP) transactions like phone orders, minimizing merchant PCI burden to SAQ A or A-EP.</p>
+</li>
+<li>
+<p><strong>SAQ C-VT</strong> is for merchants using only virtual terminal (VT) solutions provided by a PCI DSS-validated payment processor, where no electronic cardholder data storage occurs on merchant systems. It focuses on a subset of requirements like secure authentication, physical security, and transmission encryption, with fewer questions (around 79) than full SAQ C.</p>
+<p>Virtual terminal (VT) solutions are web-based or software payment interfaces that let merchants manually enter customer card details (via phone, email, or in-person) to process transactions without physical hardware. They appear as secure browser dashboards or apps on any internet-connected device like a laptop, tablet, or phone.</p>
+</li>
+<li>
+<p><strong>SAQ P2PE-HW SAQ</strong> applies for merchants using only hardware payment terminals in a validated Point-to-Point Encryption (P2PE) solution listed by the PCI Security Standards Council (PCI SSC). Merchants qualify if all payment processing occurs via approved PCI P2PE hardware terminals, with no clear-text cardholder data accessible on any computer systems or electronic media outside these devices. The P2PE solution must encrypt data from capture to decryption, and no sensitive data is stored post-authorization.</p>
+<p>They encrypt card data instantly upon card read (chip, swipe, or tap), transmitting it in ciphertext directly to a decryption gateway without exposing cleartext PAN in the merchant environment—qualifying for reduced PCI SAQ P2PE-HW scope.</p>
+</li>
+<li>
+<p><strong>SAQ D</strong> is the most comprehensive PCI DSS Self-Assessment Questionnaire, applicable separately to merchants and service providers that do not qualify for any other SAQ type.</p>
+<p>SAQ D covers all 12 PCI DSS requirements for entities that store, process, or transmit cardholder data using complex systems not fitting simpler SAQs, such as those with custom payment applications, internet-connected POS, or multi-tenant service providers. It serves as the default "catch-all" for ineligible cases like SAQ A through C-VT.</p>
+<p>Full scope (329 Questions) includes network security (firewalls, segmentation), data protection (encryption, masking), vulnerability management, access controls, monitoring, and policy maintenance.Involves detailed testing procedures, such as reviewing configurations, interviewing personnel, and examining logs across all system components.</p>
+</li>
+</ul>
+<p><strong>SAQ form summary</strong></p>
+<table>
+<thead>
+<tr>
+<th>Payment Setup</th>
+<th>Recommended SAQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fully outsourced CNP (no merchant page)</td>
+<td>SAQ A</td>
+</tr>
+<tr>
+<td>E-commerce with partial control</td>
+<td>SAQ A-EP</td>
+</tr>
+<tr>
+<td>Standalone dial-out terminals</td>
+<td>SAQ B</td>
+</tr>
+<tr>
+<td>IP-connected POI devices</td>
+<td>SAQ B-IP</td>
+</tr>
+<tr>
+<td>Internet-connected apps</td>
+<td>SAQ C</td>
+</tr>
+<tr>
+<td>Virtual terminals only</td>
+<td>SAQ C-VT</td>
+</tr>
+<tr>
+<td>Hardware payment terminals in a P2PE solution</td>
+<td>SAQ P2PE HW</td>
+</tr>
+<tr>
+<td>All others/complex</td>
+<td>SAQ D</td>
+</tr>
+</tbody>
+</table>
+<h2 id="non-compliance">Non-Compliance</h2>
+<p>Failing to comply with PCI DSS can lead to severe financial penalties, reputational damage, increased risk of data breaches, and even loss of the ability to process credit card payments.</p>
+<p><strong>Financial Penalties</strong></p>
+<ul>
+<li>
+<p>Fines from payment brands (Visa, Mastercard, etc.) can range from $5,000 to $100,000 per month depending on the severity and duration of non-compliance.</p>
+</li>
+<li>
+<p>Increased transaction fees may be imposed by acquiring banks as a risk premium.</p>
+</li>
+<li>
+<p>Liability for fraud losses if a breach occurs due to non-compliance.</p>
+</li>
+</ul>
+<p><strong>Security Risks</strong></p>
+<ul>
+<li>
+<p>Higher vulnerability to data breaches, exposing cardholder data and leading to massive cleanup costs.</p>
+</li>
+<li>
+<p>Legal liabilities from affected customers or partners, especially under data protection laws like GDPR or CCPA.</p>
+</li>
+</ul>
+<p><strong>Business Disruption</strong></p>
+<ul>
+<li>
+<p>Loss of card processing privileges — banks or payment processors may revoke your ability to accept credit cards.</p>
+</li>
+<li>
+<p>Operational downtime during investigations and remediation efforts.</p>
+</li>
+</ul>
+<p><strong>Reputational Damage</strong></p>
+<ul>
+<li>
+<p>Loss of customer trust due to perceived negligence in protecting sensitive data.</p>
+</li>
+<li>
+<p>Negative media coverage and long-term brand impact.</p>
+</li>
+</ul>
+<p><strong>Compliance Fallout</strong></p>
+<ul>
+<li>
+<p>Audits and investigations triggered by non-compliance or breach.</p>
+</li>
+<li>
+<p>Mandatory remediation plans and stricter oversight from payment processors.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="rdevanath/grc"
+        data-repo-id="R_kgDORQxT-w"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORQxT-84C2e-v"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      copyright &copy; 2026 by oneGRC
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/rdevanath" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
